@@ -1,0 +1,122 @@
+/* Importar fontes */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Georgia:wght@400;700&display=swap');
+
+body {
+    padding-top: 20px;
+    font-family: 'Georgia', serif;
+    background-color: #ece9d5;
+    background-image: url("lichapp.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #b22222;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #b22222;
+    text-align: center;
+    font-size: 23px;
+    margin-top: 40px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+.monster-subtitle {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 13.5px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ece9d5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #b22222; /* Aumentar a espessura da borda */
+    border-radius: 0; /* Remover as bordas arredondadas */
+}
+
+.btn.btn-custom {
+    background-color: #b22222 !important; /* Cor de fundo desejada */
+    border-color: #b22222 !important; /* Cor da borda desejada */
+    color: #fff !important; /* Cor do texto */
+    font-family: 'Georgia', serif !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 20px !important; /* Ajuste o preenchimento */
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    text-decoration: none !important; /* Remover sublinhado */
+    border-radius: 5px !important; /* Bordas arredondadas */
+    transition: background-color 0.3s ease !important; /* Suavizar a transição de cor */
+    opacity: 1 !important; /* Garantir que o botão seja totalmente opaco */
+}
+
+.btn-custom:hover {
+    background-color: #8b1a1a !important; /* Cor ao passar o mouse */
+}
+
+.stats {
+    font-size: 13.5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ece9d5;
+    font-family: 'Alegreya', serif;
+}
+
+.stats .label {
+    color: #b22222;
+    font-weight: bold;
+    font-family: 'Alegreya', serif;
+}
+
+hr.custom-hr {
+    border: 0;
+    height: 1px;
+    background: #8d7041;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.monster-section {
+    margin-bottom: 20px;
+}
+
+.monster-attribute {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.monster-attribute .label {
+    flex: 1;
+    color: #b22222;
+    font-weight: bold;
+}
+
+.monster-attribute .value {
+    flex: 2;
+    text-align: right;
+}
+
+h2, .stats .label, .monster-attribute .label {
+    color: #b22222;
+}
+
+.stats .value {
+    font-weight: normal;
+}

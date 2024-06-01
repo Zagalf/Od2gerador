@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Monstros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Monstros</h1>
+        <form method="post">
+            <button type="submit" class="btn btn-custom">GERAR MONSTRO</button>
+        </form>
+        {% if monstro %}
+            <h2>{{ monstro.nome }}</h2>
+            <div class="monster-subtitle">
+                {{ monstro.tipo }}, {{ monstro.tamanho }} e {{ monstro.alinhamento }} ◆ {{ ', '.join(monstro.habitat) }}
+            </div>
+            <hr class="custom-hr">
+            <div class="stats">
+                <div class="monster-attribute">
+                    <span class="label">Descrição:</span>
+                    <span class="value">{{ monstro.descricao }}</span>
+                </div>
+            </div>
+            <hr class="custom-hr">
+            <div class="stats">
+                <div class="row">
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">Encontros:</span>
+                            <span class="value">{{ monstro.qt }}</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">XP:</span>
+                            <span class="value">{{ monstro.xp }}</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">Tesouro:</span>
+                            <span class="value">{{ monstro.ts }}</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">Movimento:</span>
+                            <span class="value">{{ monstro.movimento }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="custom-hr">
+            <div class="stats">
+                <div class="row">
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">DV [PV]:</span>
+                            <span class="value">{{ monstro.dv }} [{{ monstro.pv }}]</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">CA:</span>
+                            <span class="value">{{ monstro.ca }}</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">JP:</span>
+                            <span class="value">{{ monstro.jp }}</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="monster-attribute">
+                            <span class="label">MO:</span>
+                            <span class="value">{{ monstro.moral }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="custom-hr">
+            <div class="stats">
+                <div class="monster-attribute">
+                    <span class="label">Ataques:</span>
+                    <span class="value">
+                        {% for ataque in monstro.ataques %}
+                            {{ ataque }}<br>
+                        {% endfor %}
+                    </span>
+                </div>
+            </div>
+            <hr class="custom-hr">
+            <div class="stats">
+                <div class="monster-attribute">
+                    <span class="label">Habilidades Especiais:</span>
+                    <span class="value">{{ monstro.habilidades_especiais }}</span>
+                </div>
+                <div class="monster-attribute">
+                    <span class="label">Utilidades:</span>
+                    <span class="value">{{ monstro.utilidades }}</span>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
